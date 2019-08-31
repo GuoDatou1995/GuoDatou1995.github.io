@@ -1,286 +1,705 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Head tag -->
+
+
+
 <head><meta name="generator" content="Hexo 3.9.0">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>Archive - 大头的博客</title>
+  
 
-    <!--Description-->
+  
+  
+  <meta name="description" content>
+  <meta name="author" content="大头">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
     
-
-    <!--Author-->
-    
-        <meta name="author" content="大头">
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="大头的博客">
-    
-
-    <!--Open Graph Description-->
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="大头的博客">
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="website">
-    
-
-    <!--Page Cover-->
-    
-
-    <meta name="twitter:card" content="summary">
-    
-
-    <!-- Title -->
-    
-    <title>Archives - 大头的博客</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Gallery -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Google Analytics -->
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
     
 
 
+<link rel="stylesheet" href="/.css">
+
+  <!-- load font awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+
+  <!-- include comment system code -->
+  
+    <script src="/js/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  
+  <link rel="icon" href="/images/logo.png">
 </head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/logo.svg' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">大头的博客</a>
+			</h1>
+			<subtitle>
+				
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
 
 
-<body>
 
-<div class="bg-gradient"></div>
-<div class="bg-pattern"></div>
-
-<!-- Menu -->
-<!--Menu Links and Overlay-->
-<div class="menu-bg">
-    <div class="menu-container">
-        <ul>
-            
-            <li class="menu-item">
-                <a href="/index.html">
-                    Home
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/archives">
-                    Archives
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/about.html">
-                    About
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/tags">
-                    Tags
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/categories">
-                    Categories
-                </a>
-            </li>
-            
-            <li class="menu-item">
-                <a href="/contact.html">
-                    Contact
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-<!--Hamburger Icon-->
-<nav>
-    <a href="#menu"></a>
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon active_dot'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
 </nav>
 
-<div class="container">
-
-    <!-- Main Content -->
-    
-
-<div class="row">
-    <div class="col-sm-12">
-
-        <!--Title and Logo-->
-        <header>
-    <div class="logo">
-        <a href="/"><i class="logo-icon fa fa-cube" aria-hidden="true"></i></a>
-        
-            <h1 id="main-title" class="title">Archives</h1>
-        
-    </div>
+	</div>
 </header>
 
-        <section class="main archive-container">
-            
-                <div class="archive-post">
-    <a href="/2019/08/21/Datou's World/">
-        <span class="archive-date">
-            Aug 2019
-        </span>
-        Hello World
-    </a>
+ 
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      
+	
+	<div class='archive-container'>
+		
+			<h1 class='archive-title'>2019</h1>
+			
+			
+			
+				
+
+	
+		<h2 class='archive-title'></h2>
+	
+	<div class="archive-cards">
+	
+		
+
+
+
+
+<div class='Card-archive' id='hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b' data-name='静态网页和动态网页' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/08/31/静态网页和动态网页/">
+			
+			静态网页和动态网页</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-08-31
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
 </div>
-            
-                <div class="archive-post">
-    <a href="/2019/08/21/my-first-blog/">
-        <span class="archive-date">
-            Aug 2019
-        </span>
-        'my-first-blog'
-    </a>
+
+	
+		
+
+
+
+
+<div class='Card-archive' id='hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314' data-name='tomcat下子文件夹' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/08/31/tomcat下子文件夹/">
+			
+			Tomcat下子文件夹</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-08-31
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
 </div>
-            
-                <div class="archive-post">
-    <a href="/2019/08/21/hanyu/">
-        <span class="archive-date">
-            Aug 2019
-        </span>
-        OttoskyHan!
-    </a>
+
+	
+		
+
+
+
+
+<div class='Card-archive' id='hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8' data-name='错误编码小集锦' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/08/31/错误编码小集锦/">
+			
+			错误编码小集锦</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-08-31
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
 </div>
-            
-        </section>
+
+	
+		
+
+
+
+
+<div class='Card-archive' id='hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899' data-name='虚拟主机的欺骗性' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/08/31/虚拟主机的欺骗性/">
+			
+			虚拟主机的欺骗性</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-08-31
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
+<div class='Card-archive' id='hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3' data-name='集线器，交换机，路由器' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/08/31/集线器，交换机，路由器/">
+			
+			集线器，交换机，路由器</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-08-31
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
+<div class='Card-archive' id='hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288' data-name='环境配置' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/08/26/环境配置/">
+			
+			环境配置</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-08-26
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
+<div class='Card-archive' id='hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25' data-name='负载均衡' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/08/26/负载均衡/">
+			
+			负载均衡</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-08-26
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
+<div class='Card-archive' id='hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3' data-name='微服务的定义' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/08/26/微服务的定义/">
+			
+			微服务的定义</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-08-26
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
+<div class='Card-archive' id='hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc' data-name='同步和异步' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/08/26/同步和异步/">
+			
+			同步和异步</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-08-26
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
+<div class='Card-archive' id='hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873' data-name='《腿毛》---韩愈' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/08/26/《腿毛》/">
+			
+			《腿毛》---韩愈</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'></div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-08-26
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+	</div>
+
+
+			
+		
+	</div>
+	
+
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> Copyright by <a href="">大头 </a> @ 2019</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://hexo-theme-cutie.qutang.dev">Cutie 2.1.4-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
     </div>
-</div>
-
-</div>
-
-<!-- Footer -->
-<div class="push"></div>
-
-<footer class="footer-content">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 footer-about">
-                <h2>About</h2>
-                <p>
-                    This theme was developed by <a href="https://github.com/klugjo">Jonathan Klughertz</a>. The source code is available on Github. Create Websites. Make Magic.
-                </p>
-            </div>
-            
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 recent-posts">
-        <h2>Recent Posts</h2>
-        <ul>
-            
-            <li>
-                <a class="footer-post" href="/2019/08/21/hanyu/">OttoskyHan!</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2019/08/21/my-first-blog/">&#39;my-first-blog&#39;</a>
-            </li>
-            
-            <li>
-                <a class="footer-post" href="/2019/08/21/Datou's World/">Hello World</a>
-            </li>
-            
-        </ul>
-    </div>
-
-
-
-            
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <ul class="list-inline footer-social-icons">
-                    
-                    <li class="list-inline-item">
-                        <a href="https://github.com/GuoDatou1995">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-github"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="mailto:guoxianli1995@gmain.com">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-envelope-o"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                    
-                    <li class="list-inline-item">
-                        <a href="\#">
-                            <span class="footer-icon-container">
-                                <i class="fa fa-rss"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="footer-copyright">
-                    @Untitled. All right reserved | Design & Hexo <a href="http://www.codeblocq.com/">Jonathan Klughertz</a>
-                </div>
-            </div>
-        </div>
+    
+    <div class='footer-social'>
+        
     </div>
 </footer>
 
-<!-- After footer scripts -->
+  <br>
 
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-
-<!-- Tween Max -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Custom JavaScript -->
-<script src="/js/main.js"></script>
-
-<!-- Disqus Comments -->
+  <div id="footer-nav" class='footer-nav'>
+		
 
 
 
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon active_dot'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    
+
+
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+    loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+    loadjs.ready('post-version', {
+      success: function(){
+        console.log('ready to run badge script')
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+          
+          
+          
+            var postBadge = document.querySelector('#hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873 mark.Card-badge');
+            $(postBadge).fadeOut();
+            
+          
+        
+      }
+    })
+  
+</script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('', '');
+// $('.Card-archive').each(function(){
+//     var post_url = $(this).attr('id');
+//     var true_url = $(this).find('.Card-title a').first().attr('href');
+//     var card = this;
+//     post.getCommentCount(post_url, function(count){
+//         $(card).find('.card-comment-count').first().text(count);
+//     });
+//     post.getVisitCount(post_url, function(count){
+//         $(card).find('.card-visit-count').first().text(count);
+//     });
+    
+// });
+// 
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
-
 </html>

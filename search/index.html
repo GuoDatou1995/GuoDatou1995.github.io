@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>Search - 大头的博客</title>
+  
+
+  
+  
+  <meta name="description" content>
+  <meta name="author" content="大头">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+<link rel="stylesheet" href="/.css">
+
+  <!-- load font awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+
+  <!-- include comment system code -->
+  
+    <script src="/js/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  
+  <link rel="icon" href="/images/logo.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class='header'>
+	<div class="header-title">
+		
+		<div class='header-logo'>
+			<a href='/'>
+				<img src='/images/logo.svg' />
+			</a>
+		</div>
+		<div class='header-text'>
+			<h1>
+				<a href="/">大头的博客</a>
+			</h1>
+			<subtitle>
+				
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id='header-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon active_dot'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      <style>
+    body {
+        background-color: white;
+    }
+</style>
+<div class='search-container'>
+	<input type="text" id='search-form'>
+
+	<ul class="cat-list">
+		
+	</ul>
+
+	<div class="archive-cards">
+			<div class='Card-archive' style='display:none'>
+				<div class="Card-body">
+					<h3 class='Card-title'>
+						<a>
+						</a>
+					</h3>
+					<div class="Card-meta">
+						<ul>
+							<li><i class='fa fa-calendar'></i> <span class='Card-date'></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+<script src="/libs/fuse.js/dist/fuse.min.js"></script>
+<script>
+	var options = {
+		shouldSort: true,
+		threshold: 0.4,
+		tokenize: true,
+		location: 0,
+		distance: 100,
+		maxPatternLength: 32,
+		minMatchCharLength: 2,
+		keys: [
+			"title",
+			"author",
+			"tags"
+		]
+	};
+	var s = '[{"title":"《腿毛》---韩愈","date":"2019-08-26T08:53:06.000Z","content":"我的腿毛\n我的腿毛也并没有那么长不足以在夏季穿短裤的时候保护我不被蚊子叮咬却足以在我搓澡的时候打成结\n我的腿毛同我至今为止三十一年的人生一样成事不足败事有余然而腿毛它没有主观上的罪我也从来都想做个好人\n韩愈201908。。\n","tags":[],"path":"2019/08/26/《腿毛》/","external_link":""},{"title":"微服务的定义","date":"2019-08-26T09:05:45.000Z","content":"MicroServices服务：某些功能的提供者\n背景：单体式架构把系统分为持久化层，业务逻辑层缺点是，层与层之间用API访问，牵一发而动全身，耦合性太高\n定义：根据业务逻辑，把系统分成各个独立的服务，每个服务都有各自的数据库，对外有统一的接口（服务之间的通信使用基于HTTP协议的REST API）\n框架：spring blood等\n","tags":[],"path":"2019/08/26/微服务的定义/","external_link":""},{"title":"tomcat下子文件夹","date":"2019-08-31T07:22:27.000Z","content":"BIN 可执行文件 启动停止的batconf 配置文件 xmllib jar文件webapps 可执行的项目  我们开发的项目work jsp编译成的java文件+class文件\njsp–&gt;java–&gt;calss\nwebapps是项目默认的虚拟路径可以手动修改 server.xml 的appbase同级下增加&lt;context docBase=”” path= -可以写web apps以下的相对路径-&gt;需要重启\n或者在—tomcat6confCatalinalocalhost中新建xml文件输入&lt;context docBase=”” path= -可以写web apps以下的相对路径-&gt;不需要重启\n","tags":[],"path":"2019/08/31/tomcat下子文件夹/","external_link":""},{"title":"同步和异步","date":"2019-08-26T09:04:37.000Z","content":"同步：做完一件事，再做另一件煮好水，再拆泡面包装\n异步：可以同时做好几个任务烧水，打开火之后，先去拆泡面包装，等水开了，再停下拆包装，去关掉火\n","tags":[],"path":"2019/08/26/同步和异步/","external_link":""},{"title":"虚拟主机的欺骗性","date":"2019-08-31T07:20:41.000Z","content":"虚拟主机：\n一个域名在被解析的时候，优先查找本机是否有匹配的服务器主机IP没有的话才去互联网去查找\n如果我们在访问一个互联网上的商业域名但是想欺骗用户让用户访问到虚拟主机的IP在虚拟主机上仿造一个和商业网站一摸一样的页面用户不会发现\nhow to do ：\n在server.xml修改引擎的默认地址，增加子标签指定项目的路径\n在本机的IP地址映射文件systemdrivesdtchosts中增加此商业网页的域名\n如何隐藏域名后的端口，使域名看起来更逼真：网站默认端口是80\n在server.xml将端口号改为80就不需要输入端口号也能访问此域名\n域名解析的过程：\nwww.123.com 输入\n去本机的host文件中寻找映射\n找到映射\ntomcat的配置文件server.xml中寻找引擎\n未找到本机的映射去互联网查找\n","tags":[],"path":"2019/08/31/虚拟主机的欺骗性/","external_link":""},{"title":"负载均衡","date":"2019-08-26T09:06:30.000Z","content":"背景：\n单台服务器易单点故障（容易一下全玩完）目的：将不同的用户流量，分散到不同的服务器上\n早期的解决办法：\n用DNS（域名系统）做负载均衡，为不同的客户端解析不同的IP地址，使其指向不同的服务器1对1a——–Ab——–B\n缺点：延时性，解析的结果不能及时的反馈在客户端上\n改进后的办法：\n负载均衡服务器1.由它用算法算出以后，将流量分配到各个服务器2.定时检查各服务器的情况，视情况剔除或者。。。。。\n","tags":[],"path":"2019/08/26/负载均衡/","external_link":""},{"title":"错误编码小集锦","date":"2019-08-31T07:21:41.000Z","content":"404  资源不存在\n200  一切正常  看不见\n403  权限不足\n3xx 页面重定向 跳转\n500 代码有错 （服务器内部错误）\n","tags":[],"path":"2019/08/31/错误编码小集锦/","external_link":""},{"title":"环境配置","date":"2019-08-26T09:08:25.000Z","content":"　　　　　　　　Java集成开发工具　　　　　　JDK（开发工具包）　　　　JRE（运行环境）—————————————bin+lib（jvm和jvm工作所需要的类库）　　　JVM（Java虚拟机）OS操作系统\nMyBatis背景：数据库访问层类似ADO.NET与数据库连接的过程将暴露在外面（cs文件里）的“硬代码”封装起来出于和数据库频繁连接的需求\n我这个笨蛋在设置环境变量的时候遇到的坑：环境变量区分大小写你晓得吧？呵呵错误的环境变量还没删除，可能需要去注册表里找到再删除，再议\n","tags":[],"path":"2019/08/26/环境配置/","external_link":""},{"title":"集线器，交换机，路由器","date":"2019-08-31T07:20:00.000Z","content":"1.集线器HUB（一个没有灵魂的中间人）\n背景：三个人通信难度：2个人时用一根线就好，3个人怎么办呢？（因为一台电脑就一个网口）答：要个中间人搭桥吧想象风扇的中心是HUB，扇叶是各台PC网线，它们通过中心来通信\n2.交换机SWITCH（一个有脑子的中间人）\n背景：三个人通信，但不知道是谁发出的信息答：中间人有个小本本，本本上记着呢，这条信息的地址是张三，那条是李四。实现了定向通信\n3.路由器ROUTER（一个商鞅变法一样的中间人，统一度量衡）\n背景：局域网内我们要通信啊答：各村要通信，各地方言大不同，我秦始皇说了，要说普通话于是各村PC都使用TCPIP协议来对话通信\n","tags":[],"path":"2019/08/31/集线器，交换机，路由器/","external_link":""},{"title":"静态网页和动态网页","date":"2019-08-31T07:22:53.000Z","content":"静态网页（HTML）和动态网页（JSP）区别\n动态网页会随着时间，地点，用户的改变而改变\n需要使用服务端脚本语言（JSP）\n","tags":[],"path":"2019/08/31/静态网页和动态网页/","external_link":""}]';
+
+	s = s.replace(/\\n/g, "\\n")
+               .replace(/\\'/g, "\\'")
+               .replace(/\\"/g, '\\"')
+               .replace(/\\&/g, "\\&")
+               .replace(/\\r/g, "\\r")
+               .replace(/\\t/g, "\\t")
+               .replace(/\\b/g, "\\b")
+               .replace(/\\f/g, "\\f")
+
+// remove non-printable and other non-valid JSON chars
+	s = s.replace(/[\u0000-\u0019]+/g,"");
+	var list = JSON.parse(s);
+	var fuse = new Fuse(list, options);
+	var el = document.getElementById('search-form');
+	var newBox = $('.Card-archive').first().clone();
+	el.oninput = function(event){
+		var searchText = el.value;
+		var result = fuse.search(searchText);
+		$('.archive-cards .Card-archive').remove();
+		for(var i in result){
+			var anotherBox = newBox.clone();
+			var dateStr = new Date(result[i].date);
+			anotherBox.css('display','flex');
+			var url = "";
+			if(result[i].external_link !== ""){
+				url = result[i].external_link;
+			}else{
+				url = '/' + result[i].path;
+			}
+
+			anotherBox.find('.Card-title a').text(result[i].title).attr('href', url);
+			anotherBox.find('.Card-date').text(dateStr.toDateString());
+			anotherBox.appendTo('.archive-cards');
+		}
+	}
+</script>
+
+<div class='tagcloud-container'>
+<div class='tag-cloud'>
+	
+</div>
+</div>
+
+  </div>
+
+  
+
+<footer id='footer'>
+    <div class='footer-copyright'>
+        <div>
+            <p> Copyright by <a href="">大头 </a> @ 2019</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://hexo-theme-cutie.qutang.dev">Cutie 2.1.4-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class='footer-social'>
+        
+    </div>
+</footer>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+	
+	<div class='nav-item' id='nav-item-archive'>
+		
+				<div class='nav-icon'>
+				
+			<a href="/archives/" title='Archives'>
+			<img src="/images/icons/blue-shadow/archive.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class='nav-item' id='nav-item-search'>
+		
+		<div class='nav-icon active_dot'>
+		
+			<a href="/search/" title='Search'>
+			<img src="/images/icons/blue-shadow/search.svg" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id='nav-item-more'>
+		<div class="nav-icon">
+				<a href='#' onclick='onClickMenuIcon(event);' ontouchstart='onClickMenuIcon(event);'>
+				<img src="/images/icons/blue-shadow/menu.svg" alt="">
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id='nav-more-menu-close' onclick='onClickNavMenuClose(event);' ontouchstart='onClickNavMenuClose(event);'></i>
+		
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    
+
+
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type='text/javascript'>
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type='text/javascript'>
+
+  
+</script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type='text/javascript'>
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
