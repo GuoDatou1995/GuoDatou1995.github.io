@@ -111,7 +111,7 @@
 		
 				<div class='nav-icon'>
 				
-			<a href="/archives/" title='Archives'>
+			<a href="/archives/" title='Archivi'>
 			<img src="/images/icons/blue-shadow/archive.svg" alt="">
 			</a>
 		</div>
@@ -120,7 +120,7 @@
 		
 		<div class='nav-icon'>
 		
-			<a href="/search/" title='Search'>
+			<a href="/search/" title='Cerca'>
 			<img src="/images/icons/blue-shadow/search.svg" alt="">
 			</a>
 		</div>
@@ -157,7 +157,7 @@
 
 <div class="index-container" id='/page/2/index.html' data-name='index' data-version='2.1.4'>
 	<div class='index-intro'>
-		希望世界会因为大头的存在而变得好一点。
+		你好，我是大头。
 	</div>
 	
 		<div class="grid-2_md-1 grid-equalHeight index-cards">
@@ -175,7 +175,78 @@
 
 
 
-<div class='Card Card-hover Card-index-1' id='hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873' data-name='《腿毛》---韩愈' data-version=''>
+<div class='Card Card-hover Card-index-1' id='hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc' data-name='同步和异步' data-version=''>
+	
+		
+		
+	
+	<mark class='Card-badge' style='{visibility: "hidden"}'></mark>
+	<div class='Card-figure'>
+		
+			<a href="/2019/08/26/同步和异步/">
+		
+
+		 
+			<img class='grow' src="{{ url_for(generate_post_icon(item.title)) }}" alt="" onerror='this.src = "/images/jdenticon/234bb13497c4326e8160deb6a41920523e224744a766a89e7edcbb222751ed57.png"'> 
+		
+		</a>
+	</div>
+	<div class="Card-body">
+
+			<div class='Card-title'>
+				<h2>
+				
+					<a href="/2019/08/26/同步和异步/">
+				
+				同步和异步</a></h2>
+			</div>
+			<div class='Card-excerpt'>
+				<p>
+				
+					<a href="/2019/08/26/同步和异步/">
+				
+				
+				
+				...
+				</a></p>
+				
+			</div>
+
+			
+			
+			<div class="Card-meta">
+				
+				<div class='Card-tags'></div>
+				
+				<ul>
+						<li class='card-calendar'>
+							<a href="/archives/">
+								<i class='fa fa-calendar'></i> 2019-08-26
+							</a>
+						</li>
+						
+						
+						
+				</ul>
+			</div>
+		</a>
+	</div>
+</div>
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='Card Card-hover Card-index-2' id='hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873' data-name='《腿毛》---韩愈' data-version=''>
 	
 		
 		
@@ -207,10 +278,7 @@
 				
 				
 				
-				我的腿毛
-我的腿毛也并没有那么长不足以在夏季穿短裤的时候保护我不被蚊子叮咬却足以在我搓澡的时候打成结
-我的腿毛同我至今为止三十一年的人生一样成事不足败事有余然而腿毛它没有主观上的罪我也从来都想做个好人
-韩愈2019/08/。。
+				...
 				</a></p>
 				
 			</div>
@@ -284,7 +352,7 @@
     <div class='footer-copyright'>
         <div>
             <p> Copyright by <a href="">大头 </a> @ 2019</p>
-            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://hexo-theme-cutie.qutang.dev">Cutie 2.1.4-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> e <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Tema: <a href="https://hexo-theme-cutie.qutang.dev">Cutie 2.1.4-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
         </div>
     </div>
     
@@ -308,7 +376,7 @@
 		
 				<div class='nav-icon'>
 				
-			<a href="/archives/" title='Archives'>
+			<a href="/archives/" title='Archivi'>
 			<img src="/images/icons/blue-shadow/archive.svg" alt="">
 			</a>
 		</div>
@@ -317,7 +385,7 @@
 		
 		<div class='nav-icon'>
 		
-			<a href="/search/" title='Search'>
+			<a href="/search/" title='Cerca'>
 			<img src="/images/icons/blue-shadow/search.svg" alt="">
 			</a>
 		</div>
@@ -380,9 +448,53 @@
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc .Card-title a, #hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc .Card-excerpt a, #hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc .Card-figure a');
+          new Postv2('hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc').showUnreadNotification('hashit_bec8324222cfd0aee5ced4341fe1528f3d0c62b3eac11c62d4c9f66eca52311a', function(){
+            console.log('show badge for 2019/08/26/同步和异步/ : hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc');
+            var postBadge = document.querySelector('#hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/26/同步和异步/ : hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc');
+            var postBadge = document.querySelector('#hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc mark.Card-badge');
+            $(postBadge).fadeOut();
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc').update('hashit_bec8324222cfd0aee5ced4341fe1528f3d0c62b3eac11c62d4c9f66eca52311a', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
+          
+        
+          
+          
+          
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873 .Card-title a, #hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873 .Card-excerpt a, #hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873 .Card-figure a');
+          new Postv2('hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873').showUnreadNotification('hashit_4704a3fa4d96cfc0902792a37207d575b83c9fc4a9ee0b991f23f3d1b53d27c2', function(){
+            console.log('show badge for 2019/08/26/《腿毛》/ : hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873');
+            var postBadge = document.querySelector('#hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873 mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/26/《腿毛》/ : hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873');
             var postBadge = document.querySelector('#hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873 mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873').update('hashit_4704a3fa4d96cfc0902792a37207d575b83c9fc4a9ee0b991f23f3d1b53d27c2', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_02f3993be8f2934ded55bc9605d103652bcda3dbf64861f7b91dde374a6a2873 mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
       }

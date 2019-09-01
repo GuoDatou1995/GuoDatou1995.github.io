@@ -111,7 +111,7 @@
 		
 				<div class='nav-icon active_dot'>
 				
-			<a href="/archives/" title='Archives'>
+			<a href="/archives/" title='Archivi'>
 			<img src="/images/icons/blue-shadow/archive.svg" alt="">
 			</a>
 		</div>
@@ -120,7 +120,7 @@
 		
 		<div class='nav-icon'>
 		
-			<a href="/search/" title='Search'>
+			<a href="/search/" title='Cerca'>
 			<img src="/images/icons/blue-shadow/search.svg" alt="">
 			</a>
 		</div>
@@ -482,7 +482,7 @@
     <div class='footer-copyright'>
         <div>
             <p> Copyright by <a href="">大头 </a> @ 2019</p>
-            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> and <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Theme: <a href="https://hexo-theme-cutie.qutang.dev">Cutie 2.1.4-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="https://moober.cn">Moober</a> e <i class="fas fa-graduation-cap"></i> <a href="https://qutang.github.io">Qu Tang</a> &bull; Tema: <a href="https://hexo-theme-cutie.qutang.dev">Cutie 2.1.4-Taurus</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
         </div>
     </div>
     
@@ -506,7 +506,7 @@
 		
 				<div class='nav-icon active_dot'>
 				
-			<a href="/archives/" title='Archives'>
+			<a href="/archives/" title='Archivi'>
 			<img src="/images/icons/blue-shadow/archive.svg" alt="">
 			</a>
 		</div>
@@ -515,7 +515,7 @@
 		
 		<div class='nav-icon'>
 		
-			<a href="/search/" title='Search'>
+			<a href="/search/" title='Cerca'>
 			<img src="/images/icons/blue-shadow/search.svg" alt="">
 			</a>
 		</div>
@@ -578,81 +578,261 @@
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_0d1f663416e7a89265e139beef5b3271350584ab8adc6fd5e0ddfb4818d5105a .Card-title a, #hashit_0d1f663416e7a89265e139beef5b3271350584ab8adc6fd5e0ddfb4818d5105a .Card-excerpt a, #hashit_0d1f663416e7a89265e139beef5b3271350584ab8adc6fd5e0ddfb4818d5105a .Card-figure a');
+          new Postv2('hashit_0d1f663416e7a89265e139beef5b3271350584ab8adc6fd5e0ddfb4818d5105a').showUnreadNotification('hashit_b0ba56607b2f7b2599531a7a8c546ee74df771d05a811a25b447b4d00b3597c3', function(){
+            console.log('show badge for 2019/08/31/hexo命令/ : hashit_0d1f663416e7a89265e139beef5b3271350584ab8adc6fd5e0ddfb4818d5105a');
+            var postBadge = document.querySelector('#hashit_0d1f663416e7a89265e139beef5b3271350584ab8adc6fd5e0ddfb4818d5105a mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/31/hexo命令/ : hashit_0d1f663416e7a89265e139beef5b3271350584ab8adc6fd5e0ddfb4818d5105a');
             var postBadge = document.querySelector('#hashit_0d1f663416e7a89265e139beef5b3271350584ab8adc6fd5e0ddfb4818d5105a mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_0d1f663416e7a89265e139beef5b3271350584ab8adc6fd5e0ddfb4818d5105a').update('hashit_b0ba56607b2f7b2599531a7a8c546ee74df771d05a811a25b447b4d00b3597c3', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_0d1f663416e7a89265e139beef5b3271350584ab8adc6fd5e0ddfb4818d5105a mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b .Card-title a, #hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b .Card-excerpt a, #hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b .Card-figure a');
+          new Postv2('hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b').showUnreadNotification('hashit_8c7c99ae9b4654a0c403dce6479944d870a7559401469184acbb87af9b50f5ab', function(){
+            console.log('show badge for 2019/08/31/静态网页和动态网页/ : hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b');
+            var postBadge = document.querySelector('#hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/31/静态网页和动态网页/ : hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b');
             var postBadge = document.querySelector('#hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b').update('hashit_8c7c99ae9b4654a0c403dce6479944d870a7559401469184acbb87af9b50f5ab', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_8481d0964dad43d0bb0c572ebd9a4cb182353b3029378b83381866e75899a21b mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314 .Card-title a, #hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314 .Card-excerpt a, #hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314 .Card-figure a');
+          new Postv2('hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314').showUnreadNotification('hashit_17ec84e9a73be49f0e9d7d89d634c741521552326503e873780de511536cdf71', function(){
+            console.log('show badge for 2019/08/31/tomcat下子文件夹/ : hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314');
+            var postBadge = document.querySelector('#hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314 mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/31/tomcat下子文件夹/ : hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314');
             var postBadge = document.querySelector('#hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314 mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314').update('hashit_17ec84e9a73be49f0e9d7d89d634c741521552326503e873780de511536cdf71', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_3f89a795de2975e566a734c6344c75a75ee4ded6727828b6c3b10d00ed467314 mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8 .Card-title a, #hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8 .Card-excerpt a, #hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8 .Card-figure a');
+          new Postv2('hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8').showUnreadNotification('hashit_5e88c25250659b06db07ccce4f3c504887f9d5db7ea7868ba6dd1ea6a6f52e79', function(){
+            console.log('show badge for 2019/08/31/错误编码小集锦/ : hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8');
+            var postBadge = document.querySelector('#hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8 mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/31/错误编码小集锦/ : hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8');
             var postBadge = document.querySelector('#hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8 mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8').update('hashit_5e88c25250659b06db07ccce4f3c504887f9d5db7ea7868ba6dd1ea6a6f52e79', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_57c479251e6ecc48431411ed85b99ebaeafe62d5656c2648a1921f1d3937b1e8 mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899 .Card-title a, #hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899 .Card-excerpt a, #hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899 .Card-figure a');
+          new Postv2('hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899').showUnreadNotification('hashit_eb0e988750634966b5d07b7872de4cfc256a50f6b1890ccf859beffd3aace22a', function(){
+            console.log('show badge for 2019/08/31/虚拟主机的欺骗性/ : hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899');
+            var postBadge = document.querySelector('#hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899 mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/31/虚拟主机的欺骗性/ : hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899');
             var postBadge = document.querySelector('#hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899 mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899').update('hashit_eb0e988750634966b5d07b7872de4cfc256a50f6b1890ccf859beffd3aace22a', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_32bfc8f1308be9a45bc02c667f53503c310351b965d9b2d557d883f3cdfeb899 mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3 .Card-title a, #hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3 .Card-excerpt a, #hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3 .Card-figure a');
+          new Postv2('hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3').showUnreadNotification('hashit_5eb75a6dc317277729e9f6e8eab7a8c66fc4ea82ab504d6d75d1e0ae0a79de3c', function(){
+            console.log('show badge for 2019/08/31/集线器，交换机，路由器/ : hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3');
+            var postBadge = document.querySelector('#hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3 mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/31/集线器，交换机，路由器/ : hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3');
             var postBadge = document.querySelector('#hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3 mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3').update('hashit_5eb75a6dc317277729e9f6e8eab7a8c66fc4ea82ab504d6d75d1e0ae0a79de3c', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_24a7295ae9d6338cccbc4490993314aa03c396ad9c15def703f620f3b38545c3 mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288 .Card-title a, #hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288 .Card-excerpt a, #hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288 .Card-figure a');
+          new Postv2('hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288').showUnreadNotification('hashit_5bc03229b098d2ef99da1beab75ff642430972ac7e17a62d992b3ee1872039f5', function(){
+            console.log('show badge for 2019/08/26/环境配置/ : hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288');
+            var postBadge = document.querySelector('#hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288 mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/26/环境配置/ : hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288');
             var postBadge = document.querySelector('#hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288 mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288').update('hashit_5bc03229b098d2ef99da1beab75ff642430972ac7e17a62d992b3ee1872039f5', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_ddb66a95455757d45fe02a4e90bc9bc4dc064aa5f4d51db3756157f5bf6ed288 mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25 .Card-title a, #hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25 .Card-excerpt a, #hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25 .Card-figure a');
+          new Postv2('hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25').showUnreadNotification('hashit_a7d47a0805314a292704e77fff913d84bb9cb0c2e1e6734f81b553f70bb5de9a', function(){
+            console.log('show badge for 2019/08/26/负载均衡/ : hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25');
+            var postBadge = document.querySelector('#hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25 mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/26/负载均衡/ : hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25');
             var postBadge = document.querySelector('#hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25 mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25').update('hashit_a7d47a0805314a292704e77fff913d84bb9cb0c2e1e6734f81b553f70bb5de9a', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_ddce88d166959b6a889a43a1181601178075b36bcf18116af119061a2cba2c25 mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3 .Card-title a, #hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3 .Card-excerpt a, #hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3 .Card-figure a');
+          new Postv2('hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3').showUnreadNotification('hashit_87f78c86f09a25a95f678958f041bfd29ce15e0ab5564a378ff6f5077551f413', function(){
+            console.log('show badge for 2019/08/26/微服务的定义/ : hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3');
+            var postBadge = document.querySelector('#hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3 mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/26/微服务的定义/ : hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3');
             var postBadge = document.querySelector('#hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3 mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3').update('hashit_87f78c86f09a25a95f678958f041bfd29ce15e0ab5564a378ff6f5077551f413', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_13a63d863db23ceb0c6e31de8e98f6511c3e9c7f21f5d55334ffa6dc65555cc3 mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
           
           
           
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc .Card-title a, #hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc .Card-excerpt a, #hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc .Card-figure a');
+          new Postv2('hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc').showUnreadNotification('hashit_bec8324222cfd0aee5ced4341fe1528f3d0c62b3eac11c62d4c9f66eca52311a', function(){
+            console.log('show badge for 2019/08/26/同步和异步/ : hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc');
+            var postBadge = document.querySelector('#hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/08/26/同步和异步/ : hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc');
             var postBadge = document.querySelector('#hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc mark.Card-badge');
             $(postBadge).fadeOut();
-            
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc').update('hashit_bec8324222cfd0aee5ced4341fe1528f3d0c62b3eac11c62d4c9f66eca52311a', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_7916d36935bec2f57a8df2dd066ceb5253ce050accb5709ef1cce8d1bc0971cc mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
           
         
       }
