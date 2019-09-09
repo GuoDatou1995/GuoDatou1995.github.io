@@ -164,6 +164,47 @@
 
 
 
+<div class='Card-archive' id='hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f' data-name='读书笔记-1-7操作系统管理硬件' data-version=''>
+	<mark class='Card-badge'></mark>
+	<div class="Card-body">
+		<h3 class='Card-title'>
+			
+				<a href="/2019/09/09/读书笔记-1-7操作系统管理硬件/">
+			
+			读书笔记-1-7操作系统管理硬件</a>
+		</h3>
+		<div class="Card-meta">
+			<div class='Card-tags'>
+<div class="tags">
+	
+		
+			
+				<label class='tag-1'><a href="/tags/读书笔记/">读书笔记</a></label>
+			
+		
+	
+	</div>
+</div>
+			<ul>
+					<li>
+						<a href="/archives/">
+							<i class='fa fa-calendar'></i> 2019-09-09
+						</a>
+					</li>
+					
+					
+					
+			</ul>
+		</div>
+	</div>
+</div>
+
+	
+		
+
+
+
+
 <div class='Card-archive' id='hashit_cb7654b447a80efde643aac7d9874111d2ec67c531b7766a3e8a59a4ef79c738' data-name='读书笔记-1-5/6关于缓存' data-version=''>
 	<mark class='Card-badge'></mark>
 	<div class="Card-body">
@@ -377,6 +418,32 @@
     loadjs.ready('post-version', {
       success: function(){
         console.log('ready to run badge script')
+        
+          
+          
+          
+          // show/hide post unread badage
+          var postLinks = document.querySelectorAll('#hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f .Card-title a, #hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f .Card-excerpt a, #hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f .Card-figure a');
+          new Postv2('hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f').showUnreadNotification('hashit_a2672d0eda8d269e7420aa59a736492c00f570b5ae1fdc580295ca9123453540', function(){
+            console.log('show badge for 2019/09/09/读书笔记-1-7操作系统管理硬件/ : hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f');
+            var postBadge = document.querySelector('#hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f mark.Card-badge');
+            $(postBadge).fadeIn();
+          }, function(){
+            console.log('hide badge for 2019/09/09/读书笔记-1-7操作系统管理硬件/ : hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f');
+            var postBadge = document.querySelector('#hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f mark.Card-badge');
+            $(postBadge).fadeOut();
+          }); 
+          // update cookie upon click the post and hide badge immediately
+          for(var i = 0;i < postLinks.length; i++){
+            postLinks[i].onclick = function(){
+              new Postv2('hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f').update('hashit_a2672d0eda8d269e7420aa59a736492c00f570b5ae1fdc580295ca9123453540', function(){
+                console.log('called');
+                var postBadge = document.querySelector('#hashit_4fbc4ba698005f0197aaf74d2e480dd1b05cdc5a011f4acea1d0102c4c59a97f mark.Card-badge');
+                $(postBadge).fadeOut();
+              });
+            }
+          }
+          
         
           
           
